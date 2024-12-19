@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Светлый серый фон */
+    background-color: #1a1a1a; /* Темный серый фон */
+    color: #fff; /* Белый цвет текста по умолчанию */
 }
 
 header {
-    background: #003366; /* Темно-синий фон для заголовка */
-    color: #fff;
+    background: #ff0000; /* Ярко-красный фон для заголовка */
     padding: 10px 0;
     text-align: center;
 }
@@ -30,14 +30,13 @@ nav a {
 section {
     padding: 20px;
     margin: 10px;
-    background: #fff; /* Белый фон для секций */
+    background: #2a2a2a; /* Темно-серый фон для секций */
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #003366; /* Темно-синий фон для подвала */
-    color: #fff;
+    background: #ff0000; /* Ярко-красный фон для подвала */
 }
 
 .image-gallery {
@@ -51,13 +50,13 @@ footer {
     max-width: 200px; /* Ограничивает максимальную ширину изображения */
     height: auto; /* Сохраняет пропорции изображения */
     border-radius: 5px; /* Закругляет углы изображения */
-    border: 2px solid #ddd; /* Обводка для изображений */
-    transition: transform 0.3s, border-color 0.3s; /* Плавный переход для трансформации и цвета обводки */
+    border: 2px solid #666666; /* Обводка для изображений */
+    transition: transform 0.5s ease, border-color 0.5s ease; /* Плавный переход для трансформации и цвета обводки */
 }
 
 .model-image:hover {
     transform: scale(1.1); /* Увеличивает изображение на 10% при наведении */
-    border-color: #007bff; /* Меняет цвет обводки на синий при наведении */
+    border-color: #ff0000; /* Меняет цвет обводки на красный при наведении */
 }
 
 .toggle-button {
@@ -66,16 +65,16 @@ footer {
     border: none; /* Убирает стандартную обводку */
     border-radius: 5px; /* Закругляет углы кнопок */
     cursor: pointer; /* Указывает, что кнопка кликабельна */
-    transition: transform 0.3s, background-color 0.3s; /* Плавный переход для трансформации и цвета */
+    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
 }
 
 .porsche-911-button {
-    background-color: #ff6600; /* Ярко-оранжевый цвет для Porsche 911 */
+    background-color: #b30000; /* Темно-красный цвет для Porsche 911 */
     color: white; /* Белый цвет текста для кнопки Porsche 911 */
 }
 
 .porsche-cayenne-button {
-    background-color: #333333; /* Серый цвет для Porsche Cayenne */
+    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Cayenne */
     color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
 }
 
@@ -87,11 +86,11 @@ footer {
     text-align: center; /* Центрирует содержимое модели */
     margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #666666; /* Серый цвет рамки */
     border-radius: 5px;
-    background: #f9f9f9; /* Светло-серый фон для моделей */
+    background: #333333; /* Темно-серый фон для моделей */
 }
 
 .model h3 {
-    color: #003366; /* Темно-синий цвет для заголовков моделей */
+    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
 }
