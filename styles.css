@@ -71,3 +71,25 @@ footer {
 .model h3 {
     color: #000;
 }
+
+.toggle-button {
+    padding: 15px 25px; /* Увеличивает отступы для кнопок */
+    font-size: 18px; /* Увеличивает размер шрифта */
+    border: none; /* Убирает стандартную обводку */
+    border-radius: 5px; /* Закругляет углы кнопок */
+    color: #fff; /* Цвет текста */
+    cursor: pointer; /* Указывает, что кнопка кликабельна */
+    transition: transform 0.3s, background-color 0.3s; /* Плавный переход для трансформации и цвета */
+}
+
+.porsche-911-button {
+    background-color: yellow; /* Желтый цвет для Porsche 911 */
+}
+
+.porsche-cayenne-button {
+    background-color: black; /* Черный цвет для Porsche Cayenne */
+}
+
+.toggle-button:hover {
+    transform: scale(1.1); /* Увеличивает кнопку на 10% при наведении */
+}
