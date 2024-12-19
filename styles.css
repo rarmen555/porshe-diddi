@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: #ff0000; /* Ярко-красный фон для заголовка */
+    background: #660000; /* Темно-красный фон для заголовка */
     padding: 10px 0;
     text-align: center;
 }
@@ -36,7 +36,7 @@ section {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #ff0000; /* Ярко-красный фон для подвала */
+    background: #660000; /* Темно-красный фон для подвала */
 }
 
 .image-gallery {
@@ -69,8 +69,8 @@ footer {
 }
 
 .porsche-911-button {
-    background-color: #b30000; /* Темно-красный цвет для Porsche 911 */
-    color: white; /* Белый цвет текста для кнопки Porsche 911 */
+    background-color: #ffcc00; /* Желтый цвет для Porsche 911 */
+    color: black; /* Черный цвет текста для кнопки Porsche 911 */
 }
 
 .porsche-cayenne-button {
