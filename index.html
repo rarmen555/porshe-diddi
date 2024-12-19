@@ -19,38 +19,40 @@
     </header>
 
     <section id="models">
-    <h2>Модели Porsche</h2>
-    <div class="model">
-        <h3>Porsche 911</h3>
-        <div class="image-gallery">
-            <img src="images/porsche 911-1.jpg" alt="Porsche 911 - 1" class="model-image">
-            <img src="images/porsche 911-2.jpg" alt="Porsche 911 - 2" class="model-image">
-            <img src="images/porsche 911-3.jpg" alt="Porsche 911 - 3" class="model-image">
+        <h2>Модели Porsche</h2>
+        <div class="model">
+            <button class="toggle-button">Porsche 911</button>
+            <div class="model-info" style="display: none;">
+                <div class="image-gallery">
+                    <img src="images/porsche-911-1.jpg" alt="Porsche 911 - 1" class="model-image">
+                    <img src="images/porsche-911-2.jpg" alt="Porsche 911 - 2" class="model-image">
+                </div>
+                <p>Porsche 911 — это спортивный автомобиль, который стал иконой автомобильного мира. Он известен своим уникальным дизайном и выдающимися характеристиками. С момента своего появления в 1964 году 911 стал символом производительности и стиля.</p>
+                <p>Основные характеристики:</p>
+                <ul>
+                    <li>Двигатель: 3.0L Twin-Turbo Flat-6</li>
+                    <li>Мощность: 379 л.с.</li>
+                    <li>Разгон 0-100 км/ч: 4.2 секунды</li>
+                </ul>
+            </div>
         </div>
-        <p>Porsche 911 — это спортивный автомобиль, который стал иконой автомобильного мира. Он известен своим уникальным дизайном и выдающимися характеристиками. С момента своего появления в 1964 году 911 стал символом производительности и стиля.</p>
-        <p>Основные характеристики:</p>
-        <ul>
-            <li>Двигатель: 3.0L Twin-Turbo Flat-6</li>
-            <li>Мощность: 379 л.с.</li>
-            <li>Разгон 0-100 км/ч: 4.2 секунды</li>
-        </ul>
-    </div>
-    <div class="model">
-        <h3>Porsche Cayenne</h3>
-        <div class="image-gallery">
-            <img src="images/porsche-cayenne-1.jpg" alt="Porsche Cayenne - 1" class="model-image">
-            <img src="images/porsche-cayenne-2.jpg" alt="Porsche Cayenne - 2" class="model-image">
-            <img src="images/porsche-cayenne-3.jpg" alt="Porsche Cayenne - 3" class="model-image">
+        <div class="model">
+            <button class="toggle-button">Porsche Cayenne</button>
+            <div class="model-info" style="display: none;">
+                <div class="image-gallery">
+                    <img src="images/porsche-cayenne-1.jpg" alt="Porsche Cayenne - 1" class="model-image">
+                    <img src="images/porsche-cayenne-2.jpg" alt="Porsche Cayenne - 2" class="model-image">
+                </div>
+                <p>Porsche Cayenne — это мощный внедорожник, который сочетает в себе спортивные характеристики с комфортом и практичностью. Он был представлен в 2002 году и быстро завоевал популярность благодаря своей универсальности и производительности.</p>
+                <p>Основные характеристики:</p>
+                <ul>
+                    <li>Двигатель: 3.0L V6 Turbo</li>
+                    <li>Мощность: 335 л.с.</li>
+                    <li>Разгон 0-100 км/ч: 6.1 секунды</li>
+                </ul>
+            </div>
         </div>
-        <p>Porsche Cayenne — это мощный внедорожник, который сочетает в себе спортивные характеристики с комфортом и практичностью. Он был представлен в 2002 году и быстро завоевал популярность благодаря своей универсальности и производительности.</p>
-        <p>Основные характеристики:</p>
-        <ul>
-            <li>Двигатель: 3.0L V6 Turbo</li>
-            <li>Мощность: 335 л.с.</li>
-            <li>Разгон 0-100 км/ч: 6.1 секунды</li>
-        </ul>
-    </div>
-</section>
+    </section>
 
     <section id="history">
         <h2>История Porsche</h2>
@@ -65,5 +67,20 @@
     <footer>
         <p>&copy; 2023 Porsche Cars</p>
     </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.toggle-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modelInfo = button.nextElementSibling; // Находит следующий элемент (информацию о модели)
+                if (modelInfo.style.display === "none") {
+                    modelInfo.style.display = "block"; // Показывает информацию
+                } else {
+                    modelInfo.style.display = "none"; // Скрывает информацию
+                }
+            });
+        });
+    </script>
 </body>
 </html>
