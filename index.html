@@ -22,11 +22,10 @@
         <h2>Модели Porsche</h2>
         <div class="model">
             <button class="toggle-button porsche-911-button">Porsche 911</button>
-            <div class="model-info" style="display: none;">
+            <div class="model-info" style="display: none; opacity: 0;">
                 <div class="image-gallery">
                     <img src="images/porsche-911-1.jpg" alt="Porsche 911 - 1" class="model-image">
                     <img src="images/porsche-911-2.jpg" alt="Porsche 911 - 2" class="model-image">
-                    <img src="images/porsche-911-3.jpg" alt="Porsche 911 - 3" class="model-image">
                 </div>
                 <p>Porsche 911 — это спортивный автомобиль, который стал иконой автомобильного мира. Он известен своим уникальным дизайном и выдающимися характеристиками. С момента своего появления в 1964 году 911 стал символом производительности и стиля.</p>
                 <p>Основные характеристики:</p>
@@ -39,11 +38,10 @@
         </div>
         <div class="model">
             <button class="toggle-button porsche-cayenne-button">Porsche Cayenne</button>
-            <div class="model-info" style="display: none;">
+            <div class="model-info" style="display: none; opacity: 0;">
                 <div class="image-gallery">
                     <img src="images/porsche-cayenne-1.jpg" alt="Porsche Cayenne - 1" class="model-image">
                     <img src="images/porsche-cayenne-2.jpg" alt="Porsche Cayenne - 2" class="model-image">
-                    <img src="images/porsche-cayenne-3.jpg" alt="Porsche Cayenne - 3" class="model-image">
                 </div>
                 <p>Porsche Cayenne — это мощный внедорожник, который сочетает в себе спортивные характеристики с комфортом и практичностью. Он был представлен в 2002 году и быстро завоевал популярность благодаря своей универсальности и производительности.</p>
                 <p>Основные характеристики:</p>
@@ -67,7 +65,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Porsche Cars</p>
+        <p>&copy; 2023 Porsche Cars</p>
     </footer>
 
     <script>
@@ -76,10 +74,16 @@
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 const modelInfo = button.nextElementSibling; // Находит следующий элемент (информацию о модели)
-                if (modelInfo.style.display === "none") {
+                if (modelInfo.style.display === "none" || modelInfo.style.display === "") {
                     modelInfo.style.display = "block"; // Показывает информацию
+                    setTimeout(() => {
+                        modelInfo.style.opacity = 1; // Устанавливает непрозрачность в 1 через 0.1 секунды
+                    }, 10);
                 } else {
-                    modelInfo.style.display = "none"; // Скрывает информацию
+                    modelInfo.style.opacity = 0; // Устанавливает непрозрачность в 0
+                    setTimeout(() => {
+                        modelInfo.style.display = "none"; // Скрывает информацию после анимации
+                    }, 500); // Скрывает через 0.5 секунды
                 }
             });
         });

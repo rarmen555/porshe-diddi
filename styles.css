@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0; /* Светлый серый фон */
 }
 
 header {
-    background: #000;
+    background: #003366; /* Темно-синий фон для заголовка */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -30,13 +30,13 @@ nav a {
 section {
     padding: 20px;
     margin: 10px;
-    background: #fff;
+    background: #fff; /* Белый фон для секций */
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #000;
+    background: #003366; /* Темно-синий фон для подвала */
     color: #fff;
 }
 
@@ -51,7 +51,7 @@ footer {
     max-width: 200px; /* Ограничивает максимальную ширину изображения */
     height: auto; /* Сохраняет пропорции изображения */
     border-radius: 5px; /* Закругляет углы изображения */
-    border: 2px solid #ccc; /* Добавляет обводку */
+    border: 2px solid #ddd; /* Обводка для изображений */
     transition: transform 0.3s, border-color 0.3s; /* Плавный переход для трансформации и цвета обводки */
 }
 
@@ -70,12 +70,12 @@ footer {
 }
 
 .porsche-911-button {
-    background-color: yellow; /* Желтый цвет для Porsche 911 */
-    color: black; /* Черный цвет текста для кнопки Porsche 911 */
+    background-color: #ff6600; /* Ярко-оранжевый цвет для Porsche 911 */
+    color: white; /* Белый цвет текста для кнопки Porsche 911 */
 }
 
 .porsche-cayenne-button {
-    background-color: black; /* Черный цвет для Porsche Cayenne */
+    background-color: #333333; /* Серый цвет для Porsche Cayenne */
     color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
 }
 
@@ -84,13 +84,14 @@ footer {
 }
 
 .model {
+    text-align: center; /* Центрирует содержимое модели */
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: #f9f9f9;
+    background: #f9f9f9; /* Светло-серый фон для моделей */
 }
 
 .model h3 {
-    color: #000;
+    color: #003366; /* Темно-синий цвет для заголовков моделей */
 }
