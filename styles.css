@@ -39,3 +39,15 @@ footer {
     background: #000;
     color: #fff;
 }
+
+.model {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.model h3 {
+    color: #000;
+}
