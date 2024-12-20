@@ -65,7 +65,7 @@ footer {
     border: none; /* Убирает стандартную обводку */
     border-radius: 5px; /* Закругляет углы кнопок */
     cursor: pointer; /* Указывает, что кнопка кликабельна */
-    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
+    transition: transform 0.5s ease, background-color 0.5s ease; /* Плавный переход для трансформации и цвета */
 }
 
 .porsche-911-button {
@@ -76,6 +76,26 @@ footer {
 .porsche-cayenne-button {
     background-color: #4d4d4d; /* Темно-серый цвет для Porsche Cayenne */
     color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
+}
+
+.porsche-macan-button {
+    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Macan */
+    color: white; /* Белый цвет текста для кнопки Porsche Macan */
+}
+
+.porsche-taycan-button {
+    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Taycan */
+    color: white; /* Белый цвет текста для кнопки Porsche Taycan */
+}
+
+.porsche-718-button {
+    background-color: #4d4d4d; /* Темно-серый цвет для Porsche 718 */
+    color: white; /* Белый цвет текста для кнопки Porsche 718 */
+}
+
+.porsche-panamera-button {
+    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Panamera */
+    color: white; /* Белый цвет текста для кнопки Porsche Panamera */
 }
 
 .toggle-button:hover {
@@ -91,6 +111,24 @@ footer {
     background: #333333; /* Темно-серый фон для моделей */
 }
 
-.model h3 {
-    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
+.model-info {
+    display: none; /* Скрывает информацию по умолчанию */
+    max-height: 0; /* Начальная высота 0 */
+    overflow: hidden; /* Скрывает переполнение */
+    transition: max-height 0.5s ease; /* Плавный переход для высоты */
+}
+
+.model-info.open {
+    display: block; /* Показывает информацию */
+    max-height: 500px; /* Максимальная высота при открытии */
+}
+
+.models-list {
+    display: none; /* Скрывает список моделей по умолчанию */
+    overflow: hidden; /* Скрывает переполнение */
+    transition: max-height 0.5s ease; /* Плавный переход для высоты */
+}
+
+.models-list.open {
+    display: block; /* Показывает список моделей */
 }
