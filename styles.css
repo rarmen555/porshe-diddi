@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Темный серый фон */
+    background: linear-gradient(180deg, #1a1a1a 0%, #333333 100%); /* Градиент для фона */
     color: #fff; /* Белый цвет текста по умолчанию */
 }
 
@@ -31,6 +31,11 @@ section {
     padding: 20px;
     margin: 10px;
     background: #2a2a2a; /* Темно-серый фон для секций */
+}
+
+section:hover {
+    background: #3a3a3a; /* Светлее при наведении */
+    transition: background 0.3s; /* Плавный переход */
 }
 
 footer {
@@ -65,7 +70,7 @@ footer {
     border: none; /* Убирает стандартную обводку */
     border-radius: 5px; /* Закругляет углы кнопок */
     cursor: pointer; /* Указывает, что кнопка кликабельна */
-    transition: transform 0.5s ease, background-color 0.5s ease; /* Плавный переход для трансформации и цвета */
+    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
 }
 
 .porsche-911-button {
@@ -76,26 +81,6 @@ footer {
 .porsche-cayenne-button {
     background-color: #4d4d4d; /* Темно-серый цвет для Porsche Cayenne */
     color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
-}
-
-.porsche-macan-button {
-    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Macan */
-    color: white; /* Белый цвет текста для кнопки Porsche Macan */
-}
-
-.porsche-taycan-button {
-    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Taycan */
-    color: white; /* Белый цвет текста для кнопки Porsche Taycan */
-}
-
-.porsche-718-button {
-    background-color: #4d4d4d; /* Темно-серый цвет для Porsche 718 */
-    color: white; /* Белый цвет текста для кнопки Porsche 718 */
-}
-
-.porsche-panamera-button {
-    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Panamera */
-    color: white; /* Белый цвет текста для кнопки Porsche Panamera */
 }
 
 .toggle-button:hover {
@@ -109,26 +94,58 @@ footer {
     border: 1px solid #666666; /* Серый цвет рамки */
     border-radius: 5px;
     background: #333333; /* Темно-серый фон для моделей */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для моделей */
 }
 
-.model-info {
-    display: none; /* Скрывает информацию по умолчанию */
-    max-height: 0; /* Начальная высота 0 */
-    overflow: hidden; /* Скрывает переполнение */
-    transition: max-height 0.5s ease; /* Плавный переход для высоты */
+.model h3 {
+    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
 }
 
-.model-info.open {
-    display: block; /* Показывает информацию */
-    max-height: 500px; /* Максимальная высота при открытии */
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Изменяем отображение на блочное */
+        margin: 10px 0; /* Добавляем отступы */
+    }
+
+    .model-image {
+        max-width: 100%; /* Ширина изображений 100% на мобильных устройствах */
+    }
+
+    .toggle-button {
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+    }
 }
 
-.models-list {
-    display: none; /* Скрывает список моделей по умолчанию */
-    overflow: hidden; /* Скрывает переполнение */
-    transition: max-height 0.5s ease; /* Плавный переход для высоты */
+/* Стили для формы */
+#contact-form {
+    display: flex;
+    flex-direction: column; /* Упорядочиваем элементы вертикально */
+    margin-top: 10px;
 }
 
-.models-list.open {
-    display: block; /* Показывает список моделей */
+#contact-form label {
+    margin-top: 10px; /* Отступы для меток */
+}
+#contact-form input, #contact-form textarea {
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #666666; /* Цвет рамки */
+    border-radius: 5px; /* Закругленные углы */
+    background: #444444; /* Темный фон для полей ввода */
+    color: #fff; /* Белый текст */
+}
+
+#contact-form button {
+    margin-top: 10px; /* Отступы для кнопки */
+    background-color: #ffcc00; /* Цвет кнопки */
+    color: black; /* Цвет текста кнопки */
+    cursor: pointer; /* Указывает, что кнопка кликабельна */
+    border: none; /* Убирает стандартную обводку */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход для цвета */
+}
+
+#contact-form button:hover {
+    background-color: #e6b800; /* Меняем цвет кнопки при наведении */
 }
