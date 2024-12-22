@@ -1,181 +1,182 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%); /* Темный градиент */
-    color: #e0e0e0; /* Светло-серый текст */
-}
-
-header {
-    background: #990000; /* Более насыщенный темно-красный фон для заголовка */
-    padding: 15px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav a {
-    color: #e0e0e0; /* Светло-серый текст для ссылок */
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* Плавный переход для цвета текста и масштабирования */
-}
-
-nav a:hover {
-    color: #ffcc00; /* Изменение цвета ссылки при наведении */
-    transform: scale(1.1); /* Увеличение ссылки при наведении */
-}
-
-section {
-    padding: 25px;
-    margin: 20px;
-    background: #1f1f1f; /* Темно-серый фон для секций */
-    border-radius: 8px; /* Закругленные углы секций */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Более глубокая тень для секций */
-}
-
-section:hover {
-    background: #2a2a2a; /* Светлее при наведении */
-    transition: background 0.3s; /* Плавный переход */
-}
-
-footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #990000; /* Более насыщенный темно-красный фон для подвала */
-    font-size: 14px;
-}
-
-.image-gallery {
-    display: flex; /* Используется для отображения изображений в ряд */
-    gap: 15px; /* Расстояние между изображениями */
-    margin: 15px 0; /* Отступы сверху и снизу */
-}
-
-.model-image {
-    width: 100%; /* Задает ширину 100% от родительского элемента */
-    max-width: 220px; /* Ограничивает максимальную ширину изображения */
-    height: auto; /* Сохраняет пропорции изображения */
-    border-radius: 8px; /* Закругляет углы изображения */
-    border: 2px solid #555555; /* Более темная обводка для изображений */
-    transition: transform 0.5s ease, border-color 0.5s ease; /* Плавный переход для трансформации и цвета обводки */
-}
-
-.model-image:hover {
-    transform: scale(1.1); /* Увеличивает изображение на 10% при наведении */
-    border-color: #ff0000; /* Меняет цвет обводки на красный при наведении */
-}
-
-.toggle-button {
-    padding: 15px 30px; /* Увеличивает отступы для кнопок */
-    font-size: 18px; /* Увеличивает размер шрифта */
-    border: none; /* Убирает стандартную обводку */
-    border-radius: 5px; /* Закругляет углы кнопок */
-    cursor: pointer; /* Указывает, что кнопка кликабельна */
-    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
-}
-
-.porsche-911-button {
-    background-color: #ffcc00; /* Желтый цвет для Porsche 911 */
-    color: black; /* Черный цвет текста для кнопки Porsche 911 */
-}
-
-.porsche-cayenne-button {
-    background-color: #5a5a5a; /* Более темный серый цвет для Porsche Cayenne */
-    color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
-}
-
-.porsche-macan-button {
-    background-color: #3c9a6b; /* Более насыщенный зеленый цвет для Porsche Macan */
-    color: white; /* Белый цвет текста для кнопки Porsche Macan */
-}
-
-.porsche-718-button {
-    background-color: #007acc; /* Более насыщенный синий цвет для Porsche 718 */
-    color: white; /* Белый цвет текста для кнопки Porsche 718 */
-}
-
-.toggle-button:hover {
-    transform: scale(1.1); /* Увеличивает кнопку на 10% при наведении */
-}
-
-.model {
-    text-align: center; /* Центрирует содержимое модели */
-    margin-bottom: 25px;
-    padding: 20px;
-    border: 1px solid #555555; /* Темный цвет рамки */
-    border-radius: 5px;
-    background: #333333; /* Темно-серый фон для моделей */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Более глубокая тень для моделей */
-}
-
-.model h3 {
-    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
-}/* Медиа-запрос для мобильных устройств */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block; /* Изменяем отображение на блочное */
-        margin: 10px 0; /* Добавляем отступы */
-    }
-    .model-image {
-        max-width: 100%; /* Ширина изображений 100% на мобильных устройствах */
-    }
-    .toggle-button {
-        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
-    }
-}
-
-/* Стили для формы */
-#auth, #buy {
-    margin: 20px;
-    padding: 25px;
-    background: #444444; /* Темный фон для форм аутентификации и покупки */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Более глубокая тень для форм */
-}
-
-#auth h2, #buy h2 {
-    color: #ffcc00; /* Цвет заголовков форм */
-}
-
-#auth label, #buy label {
-    margin-top: 10px; /* Отступы для меток */
-}
-
-#auth input, #buy input, #buy select {
-    width: 100%; /* Ширина полей ввода */
-    padding: 12px; /* Внутренние отступы */
-    margin-top: 5px; /* Отступы сверху для полей ввода */
-    border: 1px solid #666666; /* Цвет рамки */
-    border-radius: 5px; /* Закругленные углы */
-    background: #555555; /* Темный фон для полей ввода */
-    color: #e0e0e0; /* Светло-серый текст */
-}
-
-#auth button, #buy button {
-    margin-top: 10px; /* Отступы для кнопки */
-    background-color: #ffcc00; /* Цвет кнопки */
-    color: black; /* Цвет текста кнопки */
-    cursor: pointer; /* Указывает, что кнопка кликабельна */
-    border: none; /* Убирает стандартную обводку */
-    padding: 12px; /* Внутренние отступы */
-    border-radius: 5px; /* Закругленные углы */
-    transition: background-color 0.3s; /* Плавный переход для цвета */
-}
-
-#auth button:hover, #buy button:hover {
-    background-color: #e6b800; /* Меняем цвет кнопки при наведении */
-}
-
-/* Эффект для активного состояния навигационных ссылок */
-nav a.active {
-    border-bottom: 2px solid #ffcc00; /* Подчеркивание активной ссылки */
-    padding-bottom: 5px; /* Отступ снизу для подчеркивания */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%); /* Темный градиент */
+    color: #e0e0e0; /* Светло-серый текст */
+}
+
+header {
+    background: linear-gradient(180deg, #990000, #cc0000); /* Градиент темно-красного фона для заголовка */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #e0e0e0; /* Светло-серый текст для ссылок */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Плавный переход для цвета текста и масштабирования */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Изменение цвета ссылки при наведении */
+    transform: scale(1.1); /* Увеличение ссылки при наведении */
+}
+
+section {
+    padding: 25px;
+    margin: 20px;
+    background: linear-gradient(180deg, #1f1f1f, #333333); /* Градиент для секций */
+    border-radius: 8px; /* Закругленные углы секций */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Более глубокая тень для секций */
+}
+
+section:hover {
+    background: linear-gradient(180deg, #2a2a2a, #444444); /* Светлее при наведении */
+    transition: background 0.3s; /* Плавный переход */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(180deg, #990000, #cc0000); /* Градиент для подвала */
+    font-size: 14px;
+}
+
+.image-gallery {
+    display: flex; /* Используется для отображения изображений в ряд */
+    gap: 15px; /* Расстояние между изображениями */
+    margin: 15px 0; /* Отступы сверху и снизу */
+}
+
+.model-image {
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    max-width: 220px; /* Ограничивает максимальную ширину изображения */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 8px; /* Закругляет углы изображения */
+    border: 2px solid #555555; /* Более темная обводка для изображений */
+    transition: transform 0.5s ease, border-color 0.5s ease; /* Плавный переход для трансформации и цвета обводки */
+}
+
+.model-image:hover {
+    transform: scale(1.1); /* Увеличивает изображение на 10% при наведении */
+    border-color: #ff0000; /* Меняет цвет обводки на красный при наведении */
+}
+
+.toggle-button {
+    padding: 15px 30px; /* Увеличивает отступы для кнопок */
+    font-size: 18px; /* Увеличивает размер шрифта */
+    border: none; /* Убирает стандартную обводку */
+    border-radius: 5px; /* Закругляет углы кнопок */
+    cursor: pointer; /* Указывает, что кнопка кликабельна */
+    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
+}
+
+.porsche-911-button {
+    background: linear-gradient(180deg, #ffcc00, #ffdb4d); /* Градиент желтого цвета для Porsche 911 */
+    color: black; /* Черный цвет текста для кнопки Porsche 911 */
+}
+
+.porsche-cayenne-button {
+    background: linear-gradient(180deg, #5a5a5a, #808080); /* Градиент серого цвета для Porsche Cayenne */
+    color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
+}
+
+.porsche-macan-button {
+    background: linear-gradient(180deg, #3c9a6b, #66b3a1); /* Градиент зеленого цвета для Porsche Macan */
+    color: white; /* Белый цвет текста для кнопки Porsche Macan */
+}
+
+.porsche-718-button {
+    background: linear-gradient(180deg, #007acc, #33a1ff); /* Градиент синего цвета для Porsche 718 */
+    color: white; /* Белый цвет текста для кнопки Porsche 718 */
+}
+
+.toggle-button:hover {
+    transform: scale(1.1); /* Увеличивает кнопку на 10% при наведении */
+}
+
+.model {
+    text-align: center; /* Центрирует содержимое модели */margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #555555; /* Темный цвет рамки */
+    border-radius: 5px;
+    background: #333333; /* Темно-серый фон для моделей */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); /* Более глубокая тень для моделей */
+}
+
+.model h3 {
+    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Изменяем отображение на блочное */
+        margin: 10px 0; /* Добавляем отступы */
+    }
+    .model-image {
+        max-width: 100%; /* Ширина изображений 100% на мобильных устройствах */
+    }
+    .toggle-button {
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+    }
+}
+
+/* Стили для формы */
+#auth, #buy {
+    margin: 20px;
+    padding: 25px;
+    background: linear-gradient(180deg, #444444, #555555); /* Градиент для форм аутентификации и покупки */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Более глубокая тень для форм */
+}
+
+#auth h2, #buy h2 {
+    color: #ffcc00; /* Цвет заголовков форм */
+}
+
+#auth label, #buy label {
+    margin-top: 10px; /* Отступы для меток */
+}
+
+#auth input, #buy input, #buy select {
+    width: 100%; /* Ширина полей ввода */
+    padding: 12px; /* Внутренние отступы */
+    margin-top: 5px; /* Отступы сверху для полей ввода */
+    border: 1px solid #666666; /* Цвет рамки */
+    border-radius: 5px; /* Закругленные углы */
+    background: #555555; /* Темный фон для полей ввода */
+    color: #e0e0e0; /* Светло-серый текст */
+}
+
+#auth button, #buy button {
+    margin-top: 10px; /* Отступы для кнопки */
+    background: linear-gradient(180deg, #ffcc00, #ffdb4d); /* Градиент для кнопки */
+    color: black; /* Цвет текста кнопки */
+    cursor: pointer; /* Указывает, что кнопка кликабельна */
+    border: none; /* Убирает стандартную обводку */
+    padding: 12px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход для цвета */
+}
+
+#auth button:hover, #buy button:hover {
+    background: linear-gradient(180deg, #e6b800, #ffcc00); /* Градиент для кнопки при наведении */
+}
+
+/* Эффект для активного состояния навигационных ссылок */
+nav a.active {
+    border-bottom: 2px solid #ffcc00; /* Подчеркивание активной ссылки */
+    padding-bottom: 5px; /* Отступ снизу для подчеркивания */
 }
