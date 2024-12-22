@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #1a1a1a 0%, #333333 100%);
-    color: #fff;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%); /* Темный градиент */
+    color: #e0e0e0; /* Светло-серый текст */
 }
 
 header {
-    background: #660000; /* Темно-красный фон для заголовка */
+    background: #990000; /* Более насыщенный темно-красный фон для заголовка */
     padding: 15px 0;
     text-align: center;
 }
@@ -23,7 +23,7 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: #e0e0e0; /* Светло-серый текст для ссылок */
     text-decoration: none;
     transition: color 0.3s, transform 0.3s; /* Плавный переход для цвета текста и масштабирования */
 }
@@ -36,20 +36,20 @@ nav a:hover {
 section {
     padding: 25px;
     margin: 20px;
-    background: #2a2a2a; /* Темно-серый фон для секций */
+    background: #1f1f1f; /* Темно-серый фон для секций */
     border-radius: 8px; /* Закругленные углы секций */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для секций */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Более глубокая тень для секций */
 }
 
 section:hover {
-    background: #3a3a3a; /* Светлее при наведении */
+    background: #2a2a2a; /* Светлее при наведении */
     transition: background 0.3s; /* Плавный переход */
 }
 
 footer {
     text-align: center;
     padding: 15px 0;
-    background: #660000; /* Темно-красный фон для подвала */
+    background: #990000; /* Более насыщенный темно-красный фон для подвала */
     font-size: 14px;
 }
 
@@ -64,7 +64,7 @@ footer {
     max-width: 220px; /* Ограничивает максимальную ширину изображения */
     height: auto; /* Сохраняет пропорции изображения */
     border-radius: 8px; /* Закругляет углы изображения */
-    border: 2px solid #666666; /* Обводка для изображений */
+    border: 2px solid #555555; /* Более темная обводка для изображений */
     transition: transform 0.5s ease, border-color 0.5s ease; /* Плавный переход для трансформации и цвета обводки */
 }
 
@@ -88,17 +88,17 @@ footer {
 }
 
 .porsche-cayenne-button {
-    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Cayenne */
+    background-color: #5a5a5a; /* Более темный серый цвет для Porsche Cayenne */
     color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
 }
 
 .porsche-macan-button {
-    background-color: #2e8b57; /* Зеленый цвет для Porsche Macan */
+    background-color: #3c9a6b; /* Более насыщенный зеленый цвет для Porsche Macan */
     color: white; /* Белый цвет текста для кнопки Porsche Macan */
 }
 
 .porsche-718-button {
-    background-color: #1e90ff; /* Синий цвет для Porsche 718 */
+    background-color: #007acc; /* Более насыщенный синий цвет для Porsche 718 */
     color: white; /* Белый цвет текста для кнопки Porsche 718 */
 }
 
@@ -110,26 +110,23 @@ footer {
     text-align: center; /* Центрирует содержимое модели */
     margin-bottom: 25px;
     padding: 20px;
-    border: 1px solid #666666; /* Серый цвет рамки */
+    border: 1px solid #555555; /* Темный цвет рамки */
     border-radius: 5px;
     background: #333333; /* Темно-серый фон для моделей */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для моделей */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Более глубокая тень для моделей */
 }
 
 .model h3 {
     color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
-}
-
-/* Медиа-запрос для мобильных устройств */
+}/* Медиа-запрос для мобильных устройств */
 @media (max-width: 600px) {
     nav ul li {
         display: block; /* Изменяем отображение на блочное */
         margin: 10px 0; /* Добавляем отступы */
-    }
+    }
     .model-image {
         max-width: 100%; /* Ширина изображений 100% на мобильных устройствах */
     }
-
     .toggle-button {
         font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
     }
@@ -141,7 +138,7 @@ footer {
     padding: 25px;
     background: #444444; /* Темный фон для форм аутентификации и покупки */
     border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для форм */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Более глубокая тень для форм */
 }
 
 #auth h2, #buy h2 {
@@ -158,8 +155,8 @@ footer {
     margin-top: 5px; /* Отступы сверху для полей ввода */
     border: 1px solid #666666; /* Цвет рамки */
     border-radius: 5px; /* Закругленные углы */
-    background: #444444; /* Темный фон для полей ввода */
-    color: #fff; /* Белый текст */
+    background: #555555; /* Темный фон для полей ввода */
+    color: #e0e0e0; /* Светло-серый текст */
 }
 
 #auth button, #buy button {
