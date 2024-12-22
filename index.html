@@ -14,8 +14,10 @@ html
             <ul>
                 <li><a href="#models">Модели</a></li>
                 <li><a href="#history">История</a></li>
+                <li><a href="#buy">Купить</a></li>
                 <li><a href="#auth">Вход/Регистрация</a></li>
                 <li><a href="#contact">Контакты</a></li>
+                <li><a href="#account">Личный кабинет</a></li>
             </ul>
         </nav>
     </header>
@@ -28,6 +30,7 @@ html
                 <div class="image-gallery">
                     <img src="images/porsche-911-1.jpg" alt="Porsche 911 - 1" class="model-image">
                     <img src="images/porsche-911-2.jpg" alt="Porsche 911 - 2" class="model-image">
+                    <img src="images/porsche-911-3.jpg" alt="Porsche 911 - 3" class="model-image">
                 </div>
                 <p>Porsche 911 — это спортивный автомобиль, который стал иконой автомобильного мира. Он известен своим уникальным дизайном и выдающимися характеристиками. С момента своего появления в 1964 году 911 стал символом производительности и стиля.</p>
                 <p>Основные характеристики:</p>
@@ -44,6 +47,7 @@ html
                 <div class="image-gallery">
                     <img src="images/porsche-cayenne-1.jpg" alt="Porsche Cayenne - 1" class="model-image">
                     <img src="images/porsche-cayenne-2.jpg" alt="Porsche Cayenne - 2" class="model-image">
+                    <img src="images/porsche-cayenne-3.jpg" alt="Porsche Cayenne - 3" class="model-image">
                 </div>
                 <p>Porsche Cayenne — это мощный внедорожник, который сочетает в себе спортивные характеристики с комфортом и практичностью. Он был представлен в 2002 году и быстро завоевал популярность благодаря своей универсальности и производительности.</p>
                 <p>Основные характеристики:</p>
@@ -60,6 +64,7 @@ html
                 <div class="image-gallery">
                     <img src="images/porsche-taycan-1.jpg" alt="Porsche Taycan - 1" class="model-image">
                     <img src="images/porsche-taycan-2.jpg" alt="Porsche Taycan - 2" class="model-image">
+                    <img src="images/porsche-taycan-3.jpg" alt="Porsche Taycan - 3" class="model-image">
                 </div>
                 <p>Porsche Taycan — это первый полностью электрический спортивный автомобиль Porsche. Он сочетает в себе высокую производительность и современный дизайн, предлагая невероятные характеристики и технологические инновации.</p>
                 <p>Основные характеристики:</p>
@@ -71,12 +76,41 @@ html
             </div>
         </div>
     </section>
-
     <section id="history">
         <h2>История Porsche</h2>
         <p>Информация о богатой истории компании Porsche. Porsche была основана в 1931 году Фердинандом Порше и с тех пор стала синонимом производительности и качества.</p>
     </section>
-<section id="auth">
+
+    <section id="buy">
+        <h2>Купить Porsche</h2>
+        <p>Выберите свой идеальный Porsche из нашей коллекции. Для получения дополнительной информации свяжитесь с нами.</p>
+        <ul>
+            <li><strong>Porsche 911:</strong> от 7,000,000 руб.</li>
+            <li><strong>Porsche Cayenne:</strong> от 5,500,000 руб.</li>
+            <li><strong>Porsche Taycan:</strong> от 10,000,000 руб.</li>
+        </ul>
+        <p>Чтобы купить автомобиль, пожалуйста, заполните форму ниже:</p>
+        <form id="purchase-form">
+            <label for="purchase-name">Имя:</label>
+            <input type="text" id="purchase-name" required>
+            
+            <label for="purchase-email">Email:</label>
+            <input type="email" id="purchase-email" required>
+            
+            <label for="purchase-car">Выберите модель:</label>
+            <select id="purchase-car" required>
+                <option value="">--Выберите--</option>
+                <option value="Porsche 911">Porsche 911</option>
+                <option value="Porsche Cayenne">Porsche Cayenne</option>
+                <option value="Porsche Taycan">Porsche Taycan</option>
+            </select>
+            
+            <button type="submit">Купить</button>
+        </form>
+        <div id="purchase-message"></div>
+    </section>
+
+    <section id="auth">
         <h2>Создать профиль</h2>
         <form id="registration-form">
             <label for="reg-name">Имя:</label>
@@ -101,6 +135,14 @@ html
             
             <button type="submit">Войти</button>
         </form>
+    </section>
+
+    <section id="account" style="display: none;">
+        <h2>Личный кабинет</h2>
+        <p>Добро пожаловать, <span id="account-name"></span>!</p>
+        <h3>Ваши данные:</h3>
+        <p><strong>Email:</strong> <span id="account-email"></span></p>
+        <button id="logout-button">Выйти</button>
     </section>
 
     <section id="contact">
@@ -132,7 +174,6 @@ html
                 modelInfo.classList.toggle('open'); // Добавляет или удаляет класс 'open'
             });
         });
-
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Предотвращает отправку формы для демонстрации
             
@@ -141,11 +182,22 @@ html
             const message = document.getElementById('message').value;
 
             if (name && email && message) {
-                alert('Спасибо за ваше сообщение, ${name}!');
+                alert(Спасибо за ваше сообщение, ${name}!);
                 this.reset(); // Сброс формы после успешной отправки
             } else {
                 alert('Пожалуйста, заполните все поля.');
             }
+        });
+
+        document.getElementById('purchase-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращает отправку формы
+
+            const purchaseName = document.getElementById('purchase-name').value;
+            const purchaseEmail = document.getElementById('purchase-email').value;
+            const purchaseCar = document.getElementById('purchase-car').value;
+
+            document.getElementById('purchase-message').innerText = Спасибо, ${purchaseName}! Вы выбрали ${purchaseCar}. Мы свяжемся с вами по email: ${purchaseEmail}.;
+            this.reset(); // Сброс формы
         });
 
         document.getElementById('registration-form').addEventListener('submit', function(event) {
@@ -173,15 +225,27 @@ html
             // Получение данных из localStorage
             const storedEmail = localStorage.getItem('userEmail');
             const storedPassword = localStorage.getItem('userPassword');
-// Проверка данных
+
+            // Проверка данных
             if (email === storedEmail && password === storedPassword) {
                 alert('Успешный вход в профиль!');
-                // Здесь можно добавить логику для перехода на другую страницу или отображения данных профиля
+                document.getElementById('account-name').innerText = localStorage.getItem('userName');
+                document.getElementById('account-email').innerText = storedEmail;
+                document.getElementById('auth').style.display = 'none';
+                document.getElementById('account').style.display = 'block';
             } else {
                 alert('Неверный email или пароль.');
             }
         });
+
+        document.getElementById('logout-button').addEventListener('click', function() {
+            localStorage.removeItem('userName');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userPassword');
+            document.getElementById('account').style.display = 'none';
+            document.getElementById('auth').style.display = 'block';
+            alert('Вы вышли из профиля.');
+        });
     </script>
 </body>
 </html>
-`
