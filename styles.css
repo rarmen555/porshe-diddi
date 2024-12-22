@@ -1,169 +1,184 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(180deg, #1a1a1a 0%, #333333 100%);
-    color: #fff;
-}
-
-header {
-    background: #660000; /* Темно-красный фон для заголовка */
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s; /* Плавный переход для цвета текста */
-}
-
-nav a:hover {
-    color: #ffcc00; /* Изменение цвета ссылки при наведении */
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    background: #2a2a2a; /* Темно-серый фон для секций */
-    border-radius: 5px; /* Закругленные углы секций */
-}
-
-section:hover {
-    background: #3a3a3a; /* Светлее при наведении */
-    transition: background 0.3s; /* Плавный переход */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #660000; /* Темно-красный фон для подвала */
-}
-
-.image-gallery {
-    display: flex; /* Используется для отображения изображений в ряд */
-    gap: 10px; /* Расстояние между изображениями */
-    margin: 10px 0; /* Отступы сверху и снизу */
-}
-
-.model-image {
-    width: 100%; /* Задает ширину 100% от родительского элемента */
-    max-width: 200px; /* Ограничивает максимальную ширину изображения */
-    height: auto; /* Сохраняет пропорции изображения */
-    border-radius: 5px; /* Закругляет углы изображения */
-    border: 2px solid #666666; /* Обводка для изображений */
-    transition: transform 0.5s ease, border-color 0.5s ease; /* Плавный переход для трансформации и цвета обводки */
-}
-
-.model-image:hover {
-    transform: scale(1.1); /* Увеличивает изображение на 10% при наведении */
-    border-color: #ff0000; /* Меняет цвет обводки на красный при наведении */
-}
-
-.toggle-button {
-    padding: 15px 25px; /* Увеличивает отступы для кнопок */
-    font-size: 18px; /* Увеличивает размер шрифта */
-    border: none; /* Убирает стандартную обводку */
-    border-radius: 5px; /* Закругляет углы кнопок */
-    cursor: pointer; /* Указывает, что кнопка кликабельна */
-    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
-}
-
-.porsche-911-button {
-    background-color: #ffcc00; /* Желтый цвет для Porsche 911 */
-    color: black; /* Черный цвет текста для кнопки Porsche 911 */
-}
-
-.porsche-cayenne-button {
-    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Cayenne */
-    color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
-}
-
-.toggle-button:hover {
-    transform: scale(1.1); /* Увеличивает кнопку на 10% при наведении */
-}
-
-.model {
-    text-align: center; /* Центрирует содержимое модели */
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #666666; /* Серый цвет рамки */
-    border-radius: 5px;
-    background: #333333; /* Темно-серый фон для моделей */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для моделей */
-}
-
-.model h3 {
-    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
-}
-
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block; /* Изменяем отображение на блочное */
-        margin: 10px 0; /* Добавляем отступы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #1a1a1a 0%, #333333 100%);
+    color: #fff;
+}
+
+header {
+    background: #660000; /* Темно-красный фон для заголовка */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Плавный переход для цвета текста и масштабирования */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Изменение цвета ссылки при наведении */
+    transform: scale(1.1); /* Увеличение ссылки при наведении */
+}
+
+section {
+    padding: 25px;
+    margin: 20px;
+    background: #2a2a2a; /* Темно-серый фон для секций */
+    border-radius: 8px; /* Закругленные углы секций */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для секций */
+}
+
+section:hover {
+    background: #3a3a3a; /* Светлее при наведении */
+    transition: background 0.3s; /* Плавный переход */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #660000; /* Темно-красный фон для подвала */
+    font-size: 14px;
+}
+
+.image-gallery {
+    display: flex; /* Используется для отображения изображений в ряд */
+    gap: 15px; /* Расстояние между изображениями */
+    margin: 15px 0; /* Отступы сверху и снизу */
+}
+
+.model-image {
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    max-width: 220px; /* Ограничивает максимальную ширину изображения */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 8px; /* Закругляет углы изображения */
+    border: 2px solid #666666; /* Обводка для изображений */
+    transition: transform 0.5s ease, border-color 0.5s ease; /* Плавный переход для трансформации и цвета обводки */
+}
+
+.model-image:hover {
+    transform: scale(1.1); /* Увеличивает изображение на 10% при наведении */
+    border-color: #ff0000; /* Меняет цвет обводки на красный при наведении */
+}
+
+.toggle-button {
+    padding: 15px 30px; /* Увеличивает отступы для кнопок */
+    font-size: 18px; /* Увеличивает размер шрифта */
+    border: none; /* Убирает стандартную обводку */
+    border-radius: 5px; /* Закругляет углы кнопок */
+    cursor: pointer; /* Указывает, что кнопка кликабельна */
+    transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и цвета */
+}
+
+.porsche-911-button {
+    background-color: #ffcc00; /* Желтый цвет для Porsche 911 */
+    color: black; /* Черный цвет текста для кнопки Porsche 911 */
+}
+
+.porsche-cayenne-button {
+    background-color: #4d4d4d; /* Темно-серый цвет для Porsche Cayenne */
+    color: white; /* Белый цвет текста для кнопки Porsche Cayenne */
+}
+
+.porsche-macan-button {
+    background-color: #2e8b57; /* Зеленый цвет для Porsche Macan */
+    color: white; /* Белый цвет текста для кнопки Porsche Macan */
+}
+
+.porsche-718-button {
+    background-color: #1e90ff; /* Синий цвет для Porsche 718 */
+    color: white; /* Белый цвет текста для кнопки Porsche 718 */
+}
+
+.toggle-button:hover {
+    transform: scale(1.1); /* Увеличивает кнопку на 10% при наведении */
+}
+
+.model {
+    text-align: center; /* Центрирует содержимое модели */
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #666666; /* Серый цвет рамки */
+    border-radius: 5px;
+    background: #333333; /* Темно-серый фон для моделей */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для моделей */
+}
+
+.model h3 {
+    color: #ff0000; /* Ярко-красный цвет для заголовков моделей */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Изменяем отображение на блочное */
+        margin: 10px 0; /* Добавляем отступы */
     }
-
-    .model-image {
-        max-width: 100%; /* Ширина изображений 100% на мобильных устройствах */
-    }
-
-    .toggle-button {
-        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
-    }
-}
-
-/* Стили для формы */
-#auth, #buy {
-    margin: 20px;
-    padding: 20px;
-    background: #444444; /* Темный фон для форм аутентификации и покупки */
-    border-radius: 5px; /* Закругленные углы */
-}
-
-#auth h2, #buy h2 {
-    color: #ffcc00; /* Цвет заголовков форм */
-}
-
-#auth label, #buy label {
-    margin-top: 10px; /* Отступы для меток */
-}#auth input, #buy input, #buy select {
-    width: 100%; /* Ширина полей ввода */
-    padding: 10px; /* Внутренние отступы */
-    margin-top: 5px; /* Отступы сверху для полей ввода */
-    border: 1px solid #666666; /* Цвет рамки */
-    border-radius: 5px; /* Закругленные углы */
-    background: #444444; /* Темный фон для полей ввода */
-    color: #fff; /* Белый текст */
-}
-
-#auth button, #buy button {
-    margin-top: 10px; /* Отступы для кнопки */
-    background-color: #ffcc00; /* Цвет кнопки */
-    color: black; /* Цвет текста кнопки */
-    cursor: pointer; /* Указывает, что кнопка кликабельна */
-    border: none; /* Убирает стандартную обводку */
-    padding: 10px; /* Внутренние отступы */
-    border-radius: 5px; /* Закругленные углы */
-    transition: background-color 0.3s; /* Плавный переход для цвета */
-}
-
-#auth button:hover, #buy button:hover {
-    background-color: #e6b800; /* Меняем цвет кнопки при наведении */
-}
-
-/* Эффект для активного состояния навигационных ссылок */
-nav a.active {
-    border-bottom: 2px solid #ffcc00; /* Подчеркивание активной ссылки */
-    padding-bottom: 5px; /* Отступ снизу для подчеркивания */
+    .model-image {
+        max-width: 100%; /* Ширина изображений 100% на мобильных устройствах */
+    }
+
+    .toggle-button {
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+    }
+}
+
+/* Стили для формы */
+#auth, #buy {
+    margin: 20px;
+    padding: 25px;
+    background: #444444; /* Темный фон для форм аутентификации и покупки */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для форм */
+}
+
+#auth h2, #buy h2 {
+    color: #ffcc00; /* Цвет заголовков форм */
+}
+
+#auth label, #buy label {
+    margin-top: 10px; /* Отступы для меток */
+}
+
+#auth input, #buy input, #buy select {
+    width: 100%; /* Ширина полей ввода */
+    padding: 12px; /* Внутренние отступы */
+    margin-top: 5px; /* Отступы сверху для полей ввода */
+    border: 1px solid #666666; /* Цвет рамки */
+    border-radius: 5px; /* Закругленные углы */
+    background: #444444; /* Темный фон для полей ввода */
+    color: #fff; /* Белый текст */
+}
+
+#auth button, #buy button {
+    margin-top: 10px; /* Отступы для кнопки */
+    background-color: #ffcc00; /* Цвет кнопки */
+    color: black; /* Цвет текста кнопки */
+    cursor: pointer; /* Указывает, что кнопка кликабельна */
+    border: none; /* Убирает стандартную обводку */
+    padding: 12px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход для цвета */
+}
+
+#auth button:hover, #buy button:hover {
+    background-color: #e6b800; /* Меняем цвет кнопки при наведении */
+}
+
+/* Эффект для активного состояния навигационных ссылок */
+nav a.active {
+    border-bottom: 2px solid #ffcc00; /* Подчеркивание активной ссылки */
+    padding-bottom: 5px; /* Отступ снизу для подчеркивания */
 }
