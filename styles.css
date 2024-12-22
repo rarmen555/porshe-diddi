@@ -180,3 +180,8 @@ nav a.active {
     border-bottom: 2px solid #ffcc00; /* Подчеркивание активной ссылки */
     padding-bottom: 5px; /* Отступ снизу для подчеркивания */
 }
+
+#history {
+    font-family: 'Roboto', sans-serif; /* Применение шрифта Roboto к разделу истории */
+    line-height: 1.6; /* Увеличение межстрочного интервала для лучшей читаемости */
+}
