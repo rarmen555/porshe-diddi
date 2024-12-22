@@ -6,33 +6,6 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Cars</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .model-info {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .model-info.open {
-            display: block;
-            opacity: 1;
-        }
-        /* Дополнительные стили для кнопок и формы */
-        .toggle-button {
-            background-color: #E63946;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-        .toggle-button:hover {
-            background-color: #D62839;
-        }
-        #contact-form {
-            max-width: 400px;
-            margin: auto;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -41,6 +14,7 @@ html
             <ul>
                 <li><a href="#models">Модели</a></li>
                 <li><a href="#history">История</a></li>
+                <li><a href="#auth">Вход/Регистрация</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
@@ -102,6 +76,32 @@ html
         <h2>История Porsche</h2>
         <p>Информация о богатой истории компании Porsche. Porsche была основана в 1931 году Фердинандом Порше и с тех пор стала синонимом производительности и качества.</p>
     </section>
+<section id="auth">
+        <h2>Создать профиль</h2>
+        <form id="registration-form">
+            <label for="reg-name">Имя:</label>
+            <input type="text" id="reg-name" required>
+            
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" required>
+
+            <label for="reg-password">Пароль:</label>
+            <input type="password" id="reg-password" required>
+            
+            <button type="submit">Создать профиль</button>
+        </form>
+
+        <h2>Вход в профиль</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required>
+
+            <label for="login-password">Пароль:</label>
+            <input type="password" id="login-password" required>
+            
+            <button type="submit">Войти</button>
+        </form>
+    </section>
 
     <section id="contact">
         <h2>Контакты</h2>
@@ -141,12 +141,47 @@ html
             const message = document.getElementById('message').value;
 
             if (name && email && message) {
-                alert('Спасибо за ваше сообщение, ${name}!');
+                alert(Спасибо за ваше сообщение, ${name}!);
                 this.reset(); // Сброс формы после успешной отправки
             } else {
                 alert('Пожалуйста, заполните все поля.');
             }
         });
+
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращает отправку формы
+
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+
+            // Сохранение данных в localStorage
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPassword', password);
+
+            alert('Профиль создан! Вы можете войти в систему.');
+            this.reset(); // Сброс формы
+        });
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращает отправку формы
+
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Получение данных из localStorage
+            const storedEmail = localStorage.getItem('userEmail');
+            const storedPassword = localStorage.getItem('userPassword');
+// Проверка данных
+            if (email === storedEmail && password === storedPassword) {
+                alert('Успешный вход в профиль!');
+                // Здесь можно добавить логику для перехода на другую страницу или отображения данных профиля
+            } else {
+                alert('Неверный email или пароль.');
+            }
+        });
     </script>
 </body>
 </html>
+`
