@@ -124,24 +124,31 @@ footer {
 }
 
 /* Стили для формы */
-#contact-form {
-    display: flex;
-    flex-direction: column; /* Упорядочиваем элементы вертикально */
-    margin-top: 10px;
-}
-#contact-form label {
-    margin-top: 10px; /* Отступы для меток */
+#auth {
+    margin: 20px;
+    padding: 20px;
+    background: #444444; /* Темный фон для форм аутентификации */
+    border-radius: 5px; /* Закругленные углы */
 }
 
-#contact-form input, #contact-form textarea {
+#auth h2 {
+    color: #ffcc00; /* Цвет заголовков форм */
+}
+
+#auth label {
+    margin-top: 10px; /* Отступы для меток */
+}
+#auth input {
+    width: 100%; /* Ширина полей ввода */
     padding: 10px; /* Внутренние отступы */
+    margin-top: 5px; /* Отступы сверху для полей ввода */
     border: 1px solid #666666; /* Цвет рамки */
     border-radius: 5px; /* Закругленные углы */
     background: #444444; /* Темный фон для полей ввода */
     color: #fff; /* Белый текст */
 }
 
-#contact-form button {
+#auth button {
     margin-top: 10px; /* Отступы для кнопки */
     background-color: #ffcc00; /* Цвет кнопки */
     color: black; /* Цвет текста кнопки */
@@ -152,7 +159,7 @@ footer {
     transition: background-color 0.3s; /* Плавный переход для цвета */
 }
 
-#contact-form button:hover {
+#auth button:hover {
     background-color: #e6b800; /* Меняем цвет кнопки при наведении */
 }
 
