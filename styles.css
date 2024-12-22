@@ -25,12 +25,18 @@ nav ul li {
 nav a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s; /* Плавный переход для цвета текста */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Изменение цвета ссылки при наведении */
 }
 
 section {
     padding: 20px;
     margin: 10px;
     background: #2a2a2a; /* Темно-серый фон для секций */
+    border-radius: 5px; /* Закругленные углы секций */
 }
 
 section:hover {
@@ -123,10 +129,10 @@ footer {
     flex-direction: column; /* Упорядочиваем элементы вертикально */
     margin-top: 10px;
 }
-
 #contact-form label {
     margin-top: 10px; /* Отступы для меток */
 }
+
 #contact-form input, #contact-form textarea {
     padding: 10px; /* Внутренние отступы */
     border: 1px solid #666666; /* Цвет рамки */
@@ -148,4 +154,10 @@ footer {
 
 #contact-form button:hover {
     background-color: #e6b800; /* Меняем цвет кнопки при наведении */
+}
+
+/* Эффект для активного состояния навигационных ссылок */
+nav a.active {
+    border-bottom: 2px solid #ffcc00; /* Подчеркивание активной ссылки */
+    padding-bottom: 5px; /* Отступ снизу для подчеркивания */
 }

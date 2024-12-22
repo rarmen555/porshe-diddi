@@ -6,6 +6,33 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Cars</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .model-info {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .model-info.open {
+            display: block;
+            opacity: 1;
+        }
+        /* Дополнительные стили для кнопок и формы */
+        .toggle-button {
+            background-color: #E63946;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .toggle-button:hover {
+            background-color: #D62839;
+        }
+        #contact-form {
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -53,11 +80,27 @@ html
                 </ul>
             </div>
         </div>
+        <div class="model">
+            <button class="toggle-button porsche-taycan-button">Porsche Taycan</button>
+            <div class="model-info">
+                <div class="image-gallery">
+                    <img src="images/porsche-taycan-1.jpg" alt="Porsche Taycan - 1" class="model-image">
+                    <img src="images/porsche-taycan-2.jpg" alt="Porsche Taycan - 2" class="model-image">
+                </div>
+                <p>Porsche Taycan — это первый полностью электрический спортивный автомобиль Porsche. Он сочетает в себе высокую производительность и современный дизайн, предлагая невероятные характеристики и технологические инновации.</p>
+                <p>Основные характеристики:</p>
+                <ul>
+                    <li>Двигатель: Электрический</li>
+                    <li>Мощность: до 761 л.с.</li>
+                    <li>Разгон 0-100 км/ч: 2.4 секунды</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="history">
         <h2>История Porsche</h2>
-        <p>Информация о богатой истории компании Porsche.</p>
+        <p>Информация о богатой истории компании Porsche. Porsche была основана в 1931 году Фердинандом Порше и с тех пор стала синонимом производительности и качества.</p>
     </section>
 
     <section id="contact">
@@ -89,9 +132,20 @@ html
                 modelInfo.classList.toggle('open'); // Добавляет или удаляет класс 'open'
             });
         });
+
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Предотвращает отправку формы для демонстрации
-            alert('Спасибо за ваше сообщение!');
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert(Спасибо за ваше сообщение, ${name}!);
+                this.reset(); // Сброс формы после успешной отправки
+            } else {
+                alert('Пожалуйста, заполните все поля.');
+            }
         });
     </script>
 </body>
