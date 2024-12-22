@@ -190,16 +190,15 @@ html
         });
 
         document.getElementById('purchase-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Предотвращает отправку формы
+    event.preventDefault(); // Предотвращает отправку формы
 
-            const purchaseName = document.getElementById('purchase-name').value;
-            const purchaseEmail = document.getElementById('purchase-email').value;
-            const purchaseCar = document.getElementById('purchase-car').value;
+    const purchaseName = document.getElementById('purchase-name').value;
+    const purchaseEmail = document.getElementById('purchase-email').value;
+    const purchaseCar = document.getElementById('purchase-car').value;
 
-            document.getElementById('purchase-message').innerText = Спасибо, ${purchaseName}! Вы выбрали ${purchaseCar}. Мы свяжемся с вами по email: ${purchaseEmail}.;
-            this.reset(); // Сброс формы
-        });
-
+    document.getElementById('purchase-message').innerText = `Спасибо, ${purchaseName}! Вы выбрали ${purchaseCar}. Мы свяжемся с вами по email: ${purchaseEmail}.`;
+    this.reset(); // Сброс формы
+});
         document.getElementById('registration-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Предотвращает отправку формы
 
